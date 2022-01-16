@@ -26,3 +26,10 @@
     align-items: center;
     justify-content: center;
 }
+
+.separator {
+    color: black;
+    height: 0.01mm;
+    width: 80%;
+    margin-bottom: 15px;
+}

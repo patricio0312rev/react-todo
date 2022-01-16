@@ -12,6 +12,7 @@ export const MainPage = (props) => {
                 <h1 className="title">To-Do List</h1>
                 <div className="inputWrapper">
                     <AddTodo />
+                    <hr className="separator" />
                     <TodoItem />
                 </div>
             </div>
