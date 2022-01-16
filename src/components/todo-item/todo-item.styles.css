@@ -1,0 +1,39 @@
+.taskContainer {
+    justify-content: center;
+    display: flex;
+}
+
+.taskWrapper {
+    margin-bottom: 12px;
+    width: 80%;
+    text-align: center;
+    align-self: center;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 10px 15px 15px rgba(0,0,0,0.1);
+}
+
+.task {
+    text-align: right;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.iconsWrapper {
+    padding-top: 5px;
+}
+
+.completedIcon {
+    font-size: 20px;
+    padding-top: 14px;
+    color: springgreen;
+}
+
+.deleteIcon {
+    font-size: 20px;
+    padding-top: 14px;
+    margin-left: 10px;
+    margin-right: 20px;
+    color: red;
+}
