@@ -1,0 +1,28 @@
+.appContainer {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    height: 100vh;
+}
+
+.container {
+    border-radius: 15;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+    box-shadow: 0 10px 15px 15px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+.title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.inputWrapper {
+    align-items: center;
+    justify-content: center;
+}
