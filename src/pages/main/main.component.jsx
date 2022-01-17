@@ -2,12 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux'
 import AddTodo from '../../components/add-todo/add-todo.component'
 import TodoItem from '../../components/todo-item/todo-item.component';
-import { addTask, deleteTask } from '../../redux/actions';
+import { addTask, completedTask, deleteTask } from '../../redux/actions';
 
 import './main.styles.css';
 
 const MainPage = (props) => {
-    console.log(props.taskItems);
     return (
         <div className='appContainer'>
             <div className="container">
@@ -19,7 +18,7 @@ const MainPage = (props) => {
                     {
                         props.taskItems.map((task, key) => {
                             return (
-                                <TodoItem key={key} text={task.text} completed={task.completed} deleteTask={(task) => props.deleteTask(task)} />
+                                <TodoItem key={key} text={task.text} completed={task.completed} deleteTask={(task) => props.deleteTask(task)} completedTask={(task) => props.completedTask(task)} />
                             );
                         })
                     }
@@ -36,6 +35,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     addTask: (todo) => dispatch(addTask(todo)),
     deleteTask: (task) => dispatch(deleteTask(task)),
+    completedTask: (task) => dispatch(completedTask(task)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainPage)
