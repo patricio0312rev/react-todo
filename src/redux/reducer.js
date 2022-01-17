@@ -1,4 +1,4 @@
-import { ADD_TASK } from "./actions";
+import { ADD_TASK, DELETE_TASK } from "./actions";
 
 const initialData = {
     taskItems: [],
@@ -10,6 +10,11 @@ const taskReducer = (state = initialData, action) => {
             return {
                 ...state,
                 taskItems: [...state.taskItems, {text: action.payload, completed: false}]
+            }
+        case DELETE_TASK:
+            return {
+                ...state,
+                taskItems: [...state.taskItems.filter((task) => task.text !== action.payload)]
             }
         default:
             return state;
