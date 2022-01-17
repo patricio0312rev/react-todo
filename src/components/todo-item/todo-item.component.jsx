@@ -2,12 +2,13 @@ import React from 'react';
 
 import './todo-item.styles.css';
 
-export default function TodoItem() {
+export default function TodoItem({ text, completed }) {
+    console.log(text);
     return (
         <div>
             <div className="taskContainer">
                 <div className="taskWrapper">
-                    <p className="task">Cook Dinner</p>
+                    <p className="task">{ text }</p>
 
                     <div className="iconsWrapper">
                         <i className="fas fa-check-circle completedIcon" ></i>

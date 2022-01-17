@@ -1,6 +1,6 @@
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-import { MainPage } from "./pages/main/main.component";
+import MainPage from "./pages/main/main.component";
 import { persistor, store } from './redux/store';
 
 function App() {
